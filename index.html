@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram-Style Media Upload with Articles</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+        .video-bg { position: fixed; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1; }
+        .header { width: 100%; background: rgba(0, 0, 0, 0.7); display: flex; align-items: center; justify-content: space-between; padding: 10px 20px; position: fixed; top: 0; left: 0; z-index: 10; }
+        .logo { height: 40px; }
+        .nav-icons { display: flex; gap: 15px; }
+        .nav-icons img { width: 25px; cursor: pointer; }
+        body { display: flex; flex-direction: column; align-items: center; justify-content: flex-start; height: 100vh; text-align: center; color: white; padding-top: 60px; }
+        .container { width: 90%; max-width: 700px; background: rgba(0, 0, 0, 0.5); padding: 20px; border-radius: 10px; margin-top: 20px; }
+        .profile { display: flex; align-items: center; gap: 10px; margin-bottom: 15px; }
+        .profile img { width: 50px; height: 50px; border-radius: 50%; border: 2px solid white; }
+        h1 { font-size: 1.8rem; margin-bottom: 10px; }
+        .btn { display: inline-block; padding: 10px 20px; font-size: 1rem; color: white; background: rgba(255, 255, 255, 0.2); border: 2px solid white; border-radius: 30px; cursor: pointer; margin-top: 10px; transition: 0.3s ease; }
+        .btn:hover { background: white; color: black; transform: scale(1.1); }
+        .media-container { margin-top: 20px; display: flex; flex-direction: column; gap: 15px; }
+        
+        /* New styling for image-article layout */
+        .post { display: flex; align-items: center; background: rgba(255, 255, 255, 0.1); padding: 10px; border-radius: 10px; gap: 15px; }
+        .post img { width: 200px; height: auto; border-radius: 10px; }
+        .article { text-align: left; color: white; }
+        .article h2 { font-size: 1.5rem; margin-bottom: 5px; }
+        .article p { font-size: 1rem; line-height: 1.4; }
+    </style>
+</head>
+<body>
+
+    <!-- Background Video -->
+    <video autoplay loop muted class="video-bg">
+        <source src="RING.mov" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Instagram-Style Header -->
+    <div class="header">
+        <img src="K.jpg" alt="Logo" class="logo">
+        <div class="nav-icons">
+            <img src="K.jpg" alt="Home">
+            <img src="K.jpg" alt="Like">
+            <img src="K.jpg" alt="Profile">
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Profile Section -->
+        <div class="profile">
+            <img src="J.jpg" alt="Profile Picture">
+            <h2>@matcha.paittt</h2>
+        </div>
+
+       <h1>Programmed by @matcha.paittt</h1>
+        <p class="subtitle">Kalian Bisa Play Music Diujung paling Bawah dari websitenya Biar ngga boring bacanya.</p> <!-- Small text below title -->
+
+        <!-- Image & Article Section -->
+        <div class="media-container">
+            <div class="post">
+                <img src="KPO" alt="Nature">
+                <div class="article">
+                    <h2>Memahami dasar dasar jaringan komputer</h2>
+                    <p>Model OSI adalah kerangka konseptual yang digunakan untuk memahami cara kerja jaringan komputer.
+Model ini dibagi menjadi 7 lapisan , di mana setiap lapisan memiliki fungsi spesifik dalam proses komunikasi data antar perangkat.</p>
+                </div>
+            </div>
+
+            <div class="post">
+                <img src="IMGI" alt="Technology">
+                <div class="article">
+                    <h2>Apa itu Model OSI?</h2>
+                    <p>OSI adalah singkatan dari Open Systems Interconnection . Ini adalah model referensi yang dikembangkan oleh ISO (International Organization for Standardization) pada tahun 1984.
+Tujuannya adalah untuk menyediakan standar global agar sistem dari vendor yang berbeda dapat berkomunikasi satu sama lain.
+ Kenapa Penting?
+Standarisasi : Memastikan bahwa perangkat keras dan perangkat lunak dari vendor yang berbeda dapat bekerja bersama.
+Modularitas : Setiap lapisan fokus pada tugas tertentu, sehingga lebih mudah untuk mengelola dan memperbaiki masalah.
+Troubleshooting : Jika terjadi masalah, kita bisa mengidentifikasi lapisan mana yang bermasalah.</p>
+                </div>
+            </div>
+
+            <div class="post">
+                <img src="IMG_4124.JPG" alt="Cityscape">
+                <div class="article">
+                    <h2>Mengapa Model OSI Penting</h2>
+                    <p>Interoperabilitas :
+Memungkinkan perangkat dari vendor yang berbeda untuk berkomunikasi tanpa hambatan. Misalnya, laptop Windows dapat terhubung ke printer dari vendor lain.
+ Modularitas :
+Setiap lapisan memiliki fungsi spesifik, sehingga pengembangan teknologi baru tidak harus mengubah seluruh sistem. Contohnya, jika ada inovasi di lapisan fisik (misalnya, kabel baru), lapisan lain tetap tidak terpengaruh.
+ Troubleshooting :
+Jika terjadi masalah, kita bisa langsung mengecek lapisan mana yang bermasalah. Misalnya, jika data tidak sampai ke tujuan, mungkin ada masalah di Lapisan Jaringan atau Lapisan Transport .
+</p>
+                </div>
+            </div>
+
+            <div class="post">
+                <img src="IMG_4125.JPG" alt="Sports">
+                <div class="article">
+                    <h2>7 Lapisan Model OSI</h2>
+                    <p>Sports bring people together and teach discipline, 
+Slide 4: Penjelasan Umum 7 Lapisan OSI
+Judul : "7 Lapisan Model OSI"
+Penjelasan :
+Model OSI dibagi menjadi 7 lapisan , dimulai dari lapisan terbawah (fisik) hingga lapisan tertinggi (aplikasi). Berikut adalah gambaran umum dari setiap lapisan:
+Lapisan Fisik (Physical Layer)
+Bertanggung jawab atas transmisi data dalam bentuk sinyal fisik (listrik, optik, atau radio).
+Contoh: Kabel Ethernet, Wi-Fi, Bluetooth.
+ Lapisan Data Link (Data Link Layer)
+Mengatur transfer data antar perangkat dalam jaringan lokal.
+Mendeteksi dan mengoreksi kesalahan.
+Contoh: Ethernet, PPP (Point-to-Point Protocol).
+ Lapisan Jaringan (Network Layer)
+Menentukan rute pengiriman data dari sumber ke tujuan.
+Bertanggung jawab atas alamat IP dan routing.
+Contoh: IP (Internet Protocol), ICMP.
+ Lapisan Transport (Transport Layer)
+Memastikan data dikirim dengan benar dan lengkap.
+Mengontrol aliran data dan mengatasi kesalahan.
+Contoh: TCP (Transmission Control Protocol), UDP (User Datagram Protocol).
+ Lapisan Sesi (Session Layer)
+Mengelola sesi komunikasi antar aplikasi.
+Bertanggung jawab untuk membuka, memelihara, dan menutup sesi.
+Contoh: Protokol seperti NetBIOS, RPC.
+ Lapisan Presentasi (Presentation Layer)
+Mengubah data agar dapat dipahami oleh aplikasi penerima.
+Bertanggung jawab atas enkripsi, kompresi, dan translasi data.
+Contoh: JPEG, GIF, SSL/TLS.
+ Lapisan Aplikasi (Application Layer)
+Berinteraksi langsung dengan pengguna.
+Menyediakan layanan seperti email, web browsing, dan file transfer.
+Contoh: HTTP, FTP, SMTP.</p>
+                </div>
+            </div>
+
+            <div class="post">
+                <img src="IMG_4126.JPG" alt="Food">
+                <div class="article">
+                    <h2>Lapisan Fisik (Physical Layer)</h2>
+                    <p>Fungsi Utama :
+Mengirimkan data dalam bentuk sinyal fisik (listrik, optik, atau gelombang radio).
+Bertanggung jawab atas media transmisi seperti kabel, fiber optik, dan sinyal nirkabel.
+ Contoh Media Transmisi :
+Kabel : Kabel tembaga (Ethernet), fiber optik.
+Nirkabel : Wi-Fi, Bluetooth, sinyal radio.
+ Protokol Terkait :
+Ethernet, DSL, USB.</p>
+                </div>
+            </div>
+
+            <div class="post">
+                <img src="IMG_4127.JPG" alt="Space">
+                <div class="article">
+                    <h2>Lapisan Data Link (Data Link Layer)</h2>
+                    <p>Fungsi Utama :
+Mengatur transfer data antar perangkat dalam jaringan lokal (LAN).
+Mendeteksi dan mengoreksi kesalahan dalam transmisi data.
+ Dua Sub-Lapisan :
+LLC (Logical Link Control) : Mengelola komunikasi antar perangkat.
+MAC (Media Access Control) : Mengontrol akses ke media transmisi.
+ Contoh Protokol :
+Ethernet, PPP (Point-to-Point Protocol), Wi-Fi (IEEE 802.11)dan masig banyak data lainnya.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Play/Pause Button -->
+        <button class="btn" onclick="toggleMusic()">Pause Music</button>
+    </div>
+
+    <!-- Background Music (Auto-Play) -->
+    <audio id="bg-music" autoplay loop>
+        <source src="armageddon.mp3" type="audio/mpeg">
+        Your browser does not support the audio tag.
+    </audio>
+
+    <script>
+        let music = document.getElementById("bg-music");
+        let button = document.querySelector(".btn");
+
+        function toggleMusic() {
+            if (music.paused) {
+                music.play();
+                button.textContent = "Pause Music";
+            } else {
+                music.pause();
+                button.textContent = "Play Music";
+            }
+        }
+    </script>
+
+</body>
+</html>
